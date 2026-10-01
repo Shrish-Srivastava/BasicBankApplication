@@ -9,6 +9,7 @@ public class BankApp {
 		System.out.println("Please enter the PIN : ");
 		int pin = sc.nextInt();
 		if(bank.login(pin) ) {
+			while(true) {
 			System.out.println("Please select a option from the Banking menu: \n 1. Check Balance \n 2. Deposit Amount \n 3. Withdraw Amount \n 4. Display Account Details \n 5. Exit");
 			System.out.println("Enter your choice: ");
 			int choice = sc.nextInt();
@@ -30,12 +31,12 @@ public class BankApp {
 			break;
 			
 			case 5: System.out.println("Thank you for using the Bank Application.");
-			break;
+			return;
 			default: System.out.println("Enter from the given choices. Thank You!");
 			}
 		}
 	}
-
+}
 }
 
 class BankAccount {
